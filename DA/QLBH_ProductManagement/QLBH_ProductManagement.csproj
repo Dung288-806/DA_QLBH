@@ -1,0 +1,670 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20BD0040-CE74-48B7-B5E7-3B8A8E00756F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBH_ProductManagement</RootNamespace>
+    <AssemblyName>QLBH_ProductManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.SpellChecker.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraDialogs.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Extensions, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\AreaBUS.cs" />
+    <Compile Include="BUS\ChildFormBUS.cs" />
+    <Compile Include="BUS\CustomerBUS.cs" />
+    <Compile Include="BUS\DepartmentBUS.cs" />
+    <Compile Include="BUS\EmployeesBUS.cs" />
+    <Compile Include="BUS\GoodBUS.cs" />
+    <Compile Include="BUS\GroupFormBUS.cs" />
+    <Compile Include="BUS\GroupOfGoodsBUS.cs" />
+    <Compile Include="BUS\GroupUserBUS.cs" />
+    <Compile Include="BUS\KhuVucBUS.cs" />
+    <Compile Include="BUS\NhomHangBUS.cs" />
+    <Compile Include="BUS\OBFormBUS.cs" />
+    <Compile Include="BUS\RatesBUS.cs" />
+    <Compile Include="BUS\RuleFormBUS.cs" />
+    <Compile Include="BUS\SupplierBUS.cs" />
+    <Compile Include="BUS\UnitBUS.cs" />
+    <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="BUS\WarehouseBUS.cs" />
+    <Compile Include="DAO\AreaDAO.cs" />
+    <Compile Include="DAO\ConnectionDB.cs" />
+    <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\DepartmentDAO.cs" />
+    <Compile Include="DAO\EmployeesDAO.cs" />
+    <Compile Include="DAO\Execute.cs" />
+    <Compile Include="DAO\FormChildDAO.cs" />
+    <Compile Include="DAO\GoodDAO.cs" />
+    <Compile Include="DAO\GroupFormDAO.cs" />
+    <Compile Include="DAO\GroupOfGoodsDAO.cs" />
+    <Compile Include="DAO\GroupUserDAO.cs" />
+    <Compile Include="DAO\KhuVucDAO.cs" />
+    <Compile Include="DAO\NhomHangDAO.cs" />
+    <Compile Include="DAO\OBFormDAO.cs" />
+    <Compile Include="DAO\RatesDAO.cs" />
+    <Compile Include="DAO\RuleFormDAO.cs" />
+    <Compile Include="DAO\SupplierDAO.cs" />
+    <Compile Include="DAO\UnitDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\WarehouseDAO.cs" />
+    <Compile Include="DTO\AreaDTO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DepartmentDTO.cs" />
+    <Compile Include="DTO\EmployeesDTO.cs" />
+    <Compile Include="DTO\FormChild.cs" />
+    <Compile Include="DTO\GoodDTO.cs" />
+    <Compile Include="DTO\GroupForm.cs" />
+    <Compile Include="DTO\GroupOfGoodsDTO.cs" />
+    <Compile Include="DTO\GroupUser.cs" />
+    <Compile Include="DTO\KhuVuc.cs" />
+    <Compile Include="DTO\NhomHang.cs" />
+    <Compile Include="DTO\OBForm.cs" />
+    <Compile Include="DTO\RatesDTO.cs" />
+    <Compile Include="DTO\RuleForm.cs" />
+    <Compile Include="DTO\SupplierDTO.cs" />
+    <Compile Include="DTO\SystemLogDTO.cs" />
+    <Compile Include="DTO\UnitDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="DTO\UserGroupDTO.cs" />
+    <Compile Include="DTO\WarehouseDTO.cs" />
+    <Compile Include="GUI\AreaAction\frmAddArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AreaAction\frmAddArea.Designer.cs">
+      <DependentUpon>frmAddArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AreaAction\UpdateArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AreaAction\UpdateArea.Designer.cs">
+      <DependentUpon>UpdateArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CurrencyAction\frmAddCurrent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CurrencyAction\frmAddCurrent.Designer.cs">
+      <DependentUpon>frmAddCurrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CurrencyAction\frmUpdateCurrent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CurrencyAction\frmUpdateCurrent.Designer.cs">
+      <DependentUpon>frmUpdateCurrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerAction\frmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerAction\frmAddCustomer.Designer.cs">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerAction\frmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerAction\frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DepartmentAction\frmAddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DepartmentAction\frmAddDepartment.Designer.cs">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DepartmentAction\frmUpdateDepartmentAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DepartmentAction\frmUpdateDepartmentAction.Designer.cs">
+      <DependentUpon>frmUpdateDepartmentAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmployeesAction\frmAddEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeesAction\frmAddEmployees.Designer.cs">
+      <DependentUpon>frmAddEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmployeesAction\frmUpdateEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeesAction\frmUpdateEmployees.Designer.cs">
+      <DependentUpon>frmUpdateEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmArea.Designer.cs">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy.Designer.cs">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Customer.Designer.cs">
+      <DependentUpon>frmBuy_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Goods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Goods.Designer.cs">
+      <DependentUpon>frmBuy_Goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Warehouse.Designer.cs">
+      <DependentUpon>frmBuy_Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCollectMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCollectMoney.Designer.cs">
+      <DependentUpon>frmCollectMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDepartment.Designer.cs">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEmployees.Designer.cs">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEnterBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEnterBalance.Designer.cs">
+      <DependentUpon>frmEnterBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmFlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmFlash.Designer.cs">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmGoods.Designer.cs">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmGroupOfGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmGroupOfGoods.Designer.cs">
+      <DependentUpon>frmGroupOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmInfor.Designer.cs">
+      <DependentUpon>frmInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRates.Designer.cs">
+      <DependentUpon>frmRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRole.Designer.cs">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSystemLog.Designer.cs">
+      <DependentUpon>frmSystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmUnit.Designer.cs">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmWarehouseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmWarehouseReport.Designer.cs">
+      <DependentUpon>frmWarehouseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmWarehouseTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmWarehouseTransfer.Designer.cs">
+      <DependentUpon>frmWarehouseTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GroupOfGoodsAction\frmAddGroupOfGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GroupOfGoodsAction\frmAddGroupOfGoods.Designer.cs">
+      <DependentUpon>frmAddGroupOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GroupOfGoodsAction\frmUpdateGroupOfGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GroupOfGoodsAction\frmUpdateGroupOfGoods.Designer.cs">
+      <DependentUpon>frmUpdateGroupOfGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SupplierAction\frmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SupplierAction\frmAddSupplier.Designer.cs">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SupplierAction\frmUpdateSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SupplierAction\frmUpdateSupplier.Designer.cs">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyPhieuNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyPhieuNhapHang.Designer.cs">
+      <DependentUpon>ucBuyPhieuNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoChungTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoChungTu.Designer.cs">
+      <DependentUpon>ucBuyTheoChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoHangHoa.Designer.cs">
+      <DependentUpon>ucBuyTheoHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellPhieuBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellPhieuBanHang.Designer.cs">
+      <DependentUpon>ucSellPhieuBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoChungTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoChungTu.Designer.cs">
+      <DependentUpon>ucSellTheoChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoHangHoa.Designer.cs">
+      <DependentUpon>ucSellTheoHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucWarehouseTransferPhieuChuyenKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucWarehouseTransferPhieuChuyenKho.Designer.cs">
+      <DependentUpon>ucWarehouseTransferPhieuChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UnitAction\frmAddUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UnitAction\frmAddUnit.Designer.cs">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UnitAction\frmUpdateUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UnitAction\frmUpdateUnit.Designer.cs">
+      <DependentUpon>frmUpdateUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControlRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControlRole.Designer.cs">
+      <DependentUpon>UserControlRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WarehouseAction\frmAddWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WarehouseAction\frmAddWarehouse.Designer.cs">
+      <DependentUpon>frmAddWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WarehouseAction\frmUpdateWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WarehouseAction\frmUpdateWarehouse.Designer.cs">
+      <DependentUpon>frmUpdateWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\AreaAction\frmAddArea.resx">
+      <DependentUpon>frmAddArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AreaAction\UpdateArea.resx">
+      <DependentUpon>UpdateArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CurrencyAction\frmAddCurrent.resx">
+      <DependentUpon>frmAddCurrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CurrencyAction\frmUpdateCurrent.resx">
+      <DependentUpon>frmUpdateCurrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerAction\frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerAction\frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DepartmentAction\frmAddDepartment.resx">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DepartmentAction\frmUpdateDepartmentAction.resx">
+      <DependentUpon>frmUpdateDepartmentAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeesAction\frmAddEmployees.resx">
+      <DependentUpon>frmAddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeesAction\frmUpdateEmployees.resx">
+      <DependentUpon>frmUpdateEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmArea.resx">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBuy.resx">
+      <DependentUpon>frmBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBuy_Goods.resx">
+      <DependentUpon>frmBuy_Goods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCollectMoney.resx">
+      <DependentUpon>frmCollectMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEmployees.resx">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEnterBalance.resx">
+      <DependentUpon>frmEnterBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmFlash.resx">
+      <DependentUpon>frmFlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmGoods.resx">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmGroupOfGoods.resx">
+      <DependentUpon>frmGroupOfGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmInfor.resx">
+      <DependentUpon>frmInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRates.resx">
+      <DependentUpon>frmRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRole.resx">
+      <DependentUpon>frmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSystemLog.resx">
+      <DependentUpon>frmSystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmUnit.resx">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmWarehouseReport.resx">
+      <DependentUpon>frmWarehouseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmWarehouseTransfer.resx">
+      <DependentUpon>frmWarehouseTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GroupOfGoodsAction\frmAddGroupOfGoods.resx">
+      <DependentUpon>frmAddGroupOfGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GroupOfGoodsAction\frmUpdateGroupOfGoods.resx">
+      <DependentUpon>frmUpdateGroupOfGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SupplierAction\frmAddSupplier.resx">
+      <DependentUpon>frmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SupplierAction\frmUpdateSupplier.resx">
+      <DependentUpon>frmUpdateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBuyPhieuNhapHang.resx">
+      <DependentUpon>ucBuyPhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBuyTheoChungTu.resx">
+      <DependentUpon>ucBuyTheoChungTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBuyTheoHangHoa.resx">
+      <DependentUpon>ucBuyTheoHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellPhieuBanHang.resx">
+      <DependentUpon>ucSellPhieuBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellTheoChungTu.resx">
+      <DependentUpon>ucSellTheoChungTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellTheoHangHoa.resx">
+      <DependentUpon>ucSellTheoHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucWarehouseTransferPhieuChuyenKho.resx">
+      <DependentUpon>ucWarehouseTransferPhieuChuyenKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UnitAction\frmAddUnit.resx">
+      <DependentUpon>frmAddUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UnitAction\frmUpdateUnit.resx">
+      <DependentUpon>frmUpdateUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControlRole.resx">
+      <DependentUpon>UserControlRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WarehouseAction\frmAddWarehouse.resx">
+      <DependentUpon>frmAddWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WarehouseAction\frmUpdateWarehouse.resx">
+      <DependentUpon>frmUpdateWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="GUI\XoaFileNay.txt" />
+    <Content Include="Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
